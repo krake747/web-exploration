@@ -4,7 +4,7 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "webpack",
         "serve": "webpack serve",
-        "dev": "rimraf dist && npm run serve"
+        "dev": "rimraf dist && npm run build && npm run serve"
     },
     "devDependencies": {
         "css-loader": "^6.8.1",
