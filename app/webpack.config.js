@@ -31,7 +31,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: "TypeScript and Webpack Example",
+            title: "Greeting WebApp",
             filename: "index.html",
             template: "src/index.html"
         })
