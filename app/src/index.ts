@@ -1,7 +1,6 @@
-function greet(name: string): string {
-    return `Hello, ${name}!`;
-}
+import { greeter } from "./greeter";
+import "./styles/main.scss";
 
 const user = "TypeScript Developer";
 
-console.log(greet(user));
+console.log(greeter(user));

@@ -1,5 +1,5 @@
-const path = require("path")
-const HtmlWebpackPlugin = require("html-webpack-plugin")
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     mode: "development",
@@ -14,6 +14,10 @@ module.exports = {
                 test: /\.tsx?$/,
                 use: "ts-loader",
                 exclude: /node_modules/
+            },
+            {
+                test: /\.scss$/,
+                use: ["style-loader", "css-loader", "sass-loader"]
             }
         ]
     },
@@ -21,7 +25,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: "TypeScript and Webpack Example",
             filename: "index.html",
-            template: "index.html"
+            template: "src/index.html"
         })
     ],
     resolve: {
@@ -35,4 +39,4 @@ module.exports = {
         compress: true,
         port: 3000
     }
-}
+};
