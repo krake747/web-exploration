@@ -43,7 +43,6 @@
       "editor.defaultFormatter": "esbenp.prettier-vscode",
       "editor.tabSize": 4
     },
-    "terminal.integrated.fontSize": 13,
-    "liveServer.settings.multiRootWorkspaceName": "App"
+    "terminal.integrated.fontSize": 13
   }
 }
