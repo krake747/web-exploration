@@ -3,10 +3,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     mode: "development",
-    entry: "./src/index.ts",
+    entry: {
+        bundle: path.resolve(__dirname, "./src/index.ts")
+    },
     output: {
-        filename: "bundle.js",
-        path: path.resolve(__dirname, "dist")
+        path: path.resolve(__dirname, "dist"),
+        filename: "[name][contenthash].js"
     },
     module: {
         rules: [
@@ -36,7 +38,10 @@ module.exports = {
         static: {
             directory: path.join(__dirname, "dist")
         },
+        port: 3000,
+        open: true,
+        hot: true,
         compress: true,
-        port: 3000
+        historyApiFallback: true
     }
 };
