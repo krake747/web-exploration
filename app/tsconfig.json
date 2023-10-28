@@ -12,6 +12,8 @@
         /* Strictness */
         "strict": true,
         "noUncheckedIndexedAccess": true,
+        "noImplicitAny": true,
+        "noFallthroughCasesInSwitch": true,
 
         /* If transpiling with TypeScript: */
         "moduleResolution": "NodeNext",
@@ -21,7 +23,14 @@
 
         /* If your code runs in the DOM: */
         "lib": ["es2022", "dom", "dom.iterable"]
+
+        /* If you're building for a library: */
+        // "declaration": true
+
+        /* If you're building for a library in a monorepo: */
+        // "composite": true,
+        // "declarationMap": true
     },
-    "include": ["src/**/*"],
+    "include": ["src/**/*", "webpack.config.js"],
     "exclude": ["node_modules"]
 }
