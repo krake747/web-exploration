@@ -1,7 +1,7 @@
 function greet(name: string): string {
-    return `Hello, ${name}!`
+    return `Hello, ${name}!`;
 }
 
-const user = "TypeScript Developer"
+const user = "TypeScript Developer";
 
-console.log(greet(user))
+console.log(greet(user));
