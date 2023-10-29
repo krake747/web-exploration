@@ -1,6 +1,8 @@
-const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+const path = require("path");
 
 module.exports = {
     entry: {
@@ -20,8 +22,12 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.scss$/,
-                use: ["style-loader", "css-loader", "sass-loader"]
+                test: /\.(sa|sc|c)ss$$/,
+                use: [
+                    process.env.NODE_ENV !== "production" ? "style-loader" : MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "sass-loader"
+                ]
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -45,11 +51,10 @@ module.exports = {
             filename: "index.html",
             template: "src/index.html"
         })
-    ],
+    ].concat(process.env.NODE_ENV !== "production" ? [] : [new MiniCssExtractPlugin()]),
     resolve: {
         extensions: [".tsx", ".ts", ".js"]
     },
-    devtool: "source-map",
     optimization: {
         runtimeChunk: "single",
         moduleIds: "deterministic",
