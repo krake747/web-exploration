@@ -10,7 +10,7 @@ type BikeBrand = {
 const bikeBrands: BikeBrand[] = require("./data/bike-brands.csv");
 console.table(
     Enumerable.from(bikeBrands)
-        .where((x: BikeBrand) => x.BrandId % 3 == 0)
+        .where(x => x.BrandId % 3 == 0)
         .toArray()
 );
 
