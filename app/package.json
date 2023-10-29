@@ -7,6 +7,7 @@
         "dev": "rimraf dist && npm run build && npm run serve"
     },
     "devDependencies": {
+        "@types/linq": "^2.2.33",
         "css-loader": "^6.8.1",
         "csv-loader": "^3.0.5",
         "fork-ts-checker-webpack-plugin": "^9.0.1",

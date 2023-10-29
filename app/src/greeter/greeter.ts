@@ -1,3 +1,5 @@
+import GreetingLogo from "./../assets/greeting.svg";
+
 export function createGreetingContainer(): HTMLDivElement {
     const container = document.createElement("div") as HTMLDivElement;
     container.className = "container";
@@ -5,7 +7,7 @@ export function createGreetingContainer(): HTMLDivElement {
     const greetingImg = document.createElement("img") as HTMLImageElement;
     greetingImg.id = "greeting-img";
     greetingImg.alt = "Greeting Logo";
-    greetingImg.src = require("./../assets/greeting.svg") as string;
+    greetingImg.src = GreetingLogo as string;
 
     container.appendChild(greetingImg);
 

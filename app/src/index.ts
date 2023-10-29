@@ -1,13 +1,14 @@
 import Enumerable from "linq";
 import { createGreetingContainer } from "./greeter/greeter";
+import BikeBrandsCsv from "./data/bike-brands.csv";
 import "./styles/main.scss";
 
-type BikeBrand = {
+type BikeBrands = {
     BrandId: number;
     BrandName: number;
 };
 
-const bikeBrands: BikeBrand[] = require("./data/bike-brands.csv");
+const bikeBrands: BikeBrands[] = BikeBrandsCsv;
 console.table(
     Enumerable.from(bikeBrands)
         .where(x => x.BrandId % 3 == 0)
