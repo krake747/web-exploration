@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 module.exports = (env, argv) => {
     const mode = env.WEBPACK_SERVE ? "development" : "production";
@@ -42,6 +43,7 @@ module.exports = (env, argv) => {
             ]
         },
         plugins: [
+            new ForkTsCheckerWebpackPlugin(),
             new HtmlWebpackPlugin({
                 title: "Greeting WebApp",
                 filename: "index.html",
