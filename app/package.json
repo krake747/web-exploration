@@ -8,6 +8,7 @@
     },
     "devDependencies": {
         "css-loader": "^6.8.1",
+        "csv-loader": "^3.0.5",
         "html-webpack-plugin": "^5.5.3",
         "sass": "^1.69.5",
         "sass-loader": "^13.3.2",

@@ -1,6 +1,9 @@
 import { greeter } from "./greeter";
 import "./styles/main.scss";
 
+const bikeBrands = require("./data/bike-brands.csv");
+console.table(bikeBrands);
+
 const greetingImg = document.getElementById("greeting-img") as HTMLImageElement;
 greetingImg.src = require("./assets/greeting.svg") as string;
 
