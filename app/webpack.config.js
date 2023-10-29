@@ -31,6 +31,7 @@ module.exports = {
                 test: /\.(csv|tsv)$/,
                 loader: "csv-loader",
                 options: {
+                    dynamicTyping: true,
                     header: true,
                     skipEmptyLines: true
                 }
