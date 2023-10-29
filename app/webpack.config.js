@@ -12,9 +12,9 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "[name].bundle.[contenthash].js",
+        filename: "./js/[name].bundle.[contenthash].js",
         clean: true,
-        assetModuleFilename: "[name][ext]"
+        assetModuleFilename: "./assets/[name][ext]"
     },
     module: {
         rules: [
