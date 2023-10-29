@@ -18,5 +18,9 @@
         "webpack": "^5.89.0",
         "webpack-cli": "^5.1.4",
         "webpack-dev-server": "^4.15.1"
+    },
+    "dependencies": {
+        "linq": "^4.0.2",
+        "linq-to-typescript": "^11.0.0"
     }
 }

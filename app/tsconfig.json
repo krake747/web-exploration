@@ -16,8 +16,8 @@
         "noFallthroughCasesInSwitch": true,
 
         /* If transpiling with TypeScript: */
-        "moduleResolution": "NodeNext",
-        "module": "NodeNext",
+        "moduleResolution": "Bundler",
+        "module": "ES2022",
         "outDir": "dist",
         "sourceMap": true,
 
