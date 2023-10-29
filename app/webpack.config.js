@@ -4,11 +4,15 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
     mode: "development",
     entry: {
-        bundle: path.resolve(__dirname, "./src/index.ts")
+        index: {
+            import: path.resolve(__dirname, "./src/index.ts"),
+            dependOn: "greeter"
+        },
+        greeter: [path.resolve(__dirname, "./src/greeter/greeter.ts")]
     },
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "[name][contenthash].js",
+        filename: "[name].bundle.[contenthash].js",
         clean: true,
         assetModuleFilename: "[name][ext]"
     },
@@ -58,5 +62,8 @@ module.exports = {
         hot: true,
         compress: true,
         historyApiFallback: true
+    },
+    optimization: {
+        runtimeChunk: "single"
     }
 };
